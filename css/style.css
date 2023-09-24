@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display:wght@500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+.header .logo {
+  font-size: 2.5em;
+  color: black;
+  cursor: pointer;
+}
+.header .navbar ul {
+  list-style: none;
+  display: flex;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.header .navbar ul li a {
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+  transition: 0.3s;
+  position: relative;
+  text-transform: capitalize;
+}
+.header .navbar ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  background-color: #002d5b;
+  transform: scale(0);
+  transition: 0.3s;
+}
+.header .navbar ul li a:hover::after {
+  transform: scale(1);
+}
+.header .button {
+  background-color: #ec5b53;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #fff;
+  text-transform: capitalize;
+}
+.header .button:hover {
+  background-color: #a8362f;
+}
+
+.main {
+  display: grid;
+  grid-template-areas: "sidebar konten";
+  grid-template-rows: 84vh;
+  grid-template-columns: 100px 1fr;
+}
+.main .sidebar {
+  grid-area: sidebar;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 30px;
+  align-items: center;
+}
+.main .sidebar .logo-aside {
+  color: #002d5b;
+  font-size: 1.8em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.main .sidebar .logo-aside:hover {
+  color: #ec5b53;
+}
+.main .konten {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main .konten .hero {
+  width: 80vh;
+}
+.main .konten .hero h1 {
+  font-size: 3.5em;
+  font-family: "Playfair Display", serif;
+  color: #002d5b;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+.main .konten .hero .button {
+  display: inline-block;
+  background-color: #ec5b53;
+  margin-top: 50px;
+  margin-left: 20px;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #fff;
+}
+.main .konten .hero .button:hover {
+  background-color: #a8362f;
+}
+
+.aul {
+  position: absolute;
+  top: -433px;
+  right: 1px;
+  z-index: -1;
+  width: 120vh;
+}/*# sourceMappingURL=style.css.map */
